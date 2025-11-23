@@ -195,8 +195,78 @@ a:hover {
 /* Footer */
 footer {
     background-color: var(--accent-color);
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 4rem;
     color: var(--light2);
+    font-size: 0.9rem;
+    padding: 1rem 2rem;
 }
+
+/* Rows */
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* allows stacking on small screens */
+    margin: 0; /* remove extra space */
+}
+
+/* First row columns */
+footer {
+    background-color: var(--accent-color);
+    color: var(--light2);
+    font-size: 0.9rem;
+    padding: 1rem 2rem;
+}
+
+/* Top row: two columns */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* allows stacking on small screens */
+    margin-bottom: 0; /* remove extra space below */
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+/* Bottom row: full-width centered text */
+.footer-bottom {
+    text-align: center;
+    width: 100%; /* ensure it spans entire footer */
+    margin-top: 0.25rem; /* small spacing if desired */
+}
+
+/* Links */
+footer a {
+    color: var(--light2);
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+footer a:hover {
+    color: var(--neutral-bg);
+}
+
+/* Responsive stacking for small screens */
+@media (max-width: 600px) {
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        margin: 0.25rem 0; /* small spacing between stacked items */
+        text-align: center;
+    }
+}
+
+
+
+
+

@@ -21,5 +21,5 @@ async function loadHTML(id, file) {
 }
 
 // Load the header and footer on every page that includes this script.
-loadHTML("header", "header.html");
-loadHTML("footer", "footer.html");
+loadHTML("header", "/header.html");
+loadHTML("footer", "/footer.html");
