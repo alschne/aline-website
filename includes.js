@@ -15,11 +15,25 @@ async function loadHTML(id, file) {
     const html = await response.text();
     element.innerHTML = html;
 
+    return true;
   } catch (err) {
     console.error("Error loading HTML:", err);
   }
 }
 
 // Load the header and footer on every page that includes this script.
-loadHTML("header", "/header.html");
+loadHTML("header", "/header.html").then(() => {
+  const currentPath = window.location.pathname;
+
+  document.querySelectorAll("nav a").forEach(link => {
+    const linkPath = link.getAttribute("href");
+
+    if (
+      linkPath === currentPath ||
+      (linkPath !== "/" && currentPath !== "/" && currentPath.startsWith(linkPath))
+    ) {
+      link.classList.add("active");
+    }
+  });
+});
 loadHTML("footer", "/footer.html");
