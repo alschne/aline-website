@@ -173,7 +173,7 @@
         font-weight: 600;
         border: none;
         cursor: pointer;
-        white-space: nowrap;     /* prevents wrapping on small screens */
+        white-space: nowrap;    
     }
     @media (max-width: 768px) {
         .hero-btn {
@@ -471,7 +471,7 @@
     /* -------------------------------- Services Page ------------------------------- */
     .services-container {
         max-width: 1100px;
-        margin: 80px auto 80px; /* Pulls cards up into the hero section slightly */
+        margin: 80px auto 80px; 
         padding: 0 20px;
     }
 
@@ -523,10 +523,9 @@
         margin-bottom: 20px;
     }
 
-    /* Learn More Buttons inside cards */
     .btn-card-small {
-        margin-top: auto; /* Pushes button to the bottom */
-        align-self: flex-end; /* Aligns to the right as per image */
+        margin-top: auto; 
+        align-self: flex-end; 
         background-color: var(--purple-light);
         color: white;
         text-decoration: none;
@@ -536,7 +535,6 @@
         font-weight: 600;
     }
 
-    /* Specialized Partnership Card */
     .partnership-card {
         padding: 20px;
     }
@@ -575,7 +573,7 @@
     /* Responsive Logic */
     @media (max-width: 900px) {
         .services-grid {
-            grid-template-columns: 1fr; /* Stack cards on tablet/mobile */
+            grid-template-columns: 1fr; 
         }
         
         .partnership-content {
@@ -593,39 +591,53 @@
     }
 
     /* -------------------------------- Services Pages ------------------------------- */
-    .how-it-works {
-        padding: 60px 0;
+
+    /* 1. SHARED UTILITY CLASSES (The "Cleaning" Part) */
+    .section-padding {
+        padding: 40px 0; 
         text-align: center;
+    }
+
+    .content-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .container-transparent {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important; 
     }
 
     .section-title {
         font-size: 2rem;
         color: #333;
-        margin-bottom: 60px;
+        margin-bottom: 30px; 
         font-weight: 600;
+        text-align: center;
     }
 
-    .how-it-works .hiw-container {
+    /* 2. SPECIFIC SECTION STYLES */
+
+    /* How It Works Section */
+    .hiw-container {
         background-color: #ffffff;
-        max-width: 1200px; 
-        margin: 0 auto;
-        padding: 60px 40px; 
-        border-radius: 12px; 
-        box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
     }
 
     .process-wrapper {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
-        position: relative; 
-        max-width: 900px;
+        position: relative;
+        max-width: 1100px;
         margin: 0 auto;
     }
 
     .connector-line {
         position: absolute;
-        top: 40px; 
+        top: 50px;
         left: 10%;
         right: 10%;
         height: 2px;
@@ -636,66 +648,150 @@
     .process-step {
         flex: 1;
         position: relative;
-        z-index: 2; 
+        z-index: 2;
         padding: 0 10px;
     }
 
+    .process-step h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+
+    .process-step p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
     .icon-circle {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         background-color: white;
-        border: 2px solid #8c83a1; 
+        border: 2px solid #8c83a1;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 auto 20px;
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         color: #8c83a1;
         transition: all 0.3s ease;
     }
 
-    .process-step:hover .icon-circle {
-        background-color: #8c83a1;
+    /* What You Receive Cards */
+    .wyr-card-grid {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        max-width: 1200px; 
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+
+    .wyr-card {
+        background: white;
+        padding: 50px 35px;
+        border-radius: 12px;
+        flex: 1;
+        min-width: 280px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .wyr-icon {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .wyr-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .wyr-card p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    /* Pricing Section */
+    .pricing-content {
+        background-color: var(--secondary-color);
         color: white;
-        transform: scale(1.1);
     }
 
-    .process-step h3 {
-        font-size: 1.1rem;
-        color: #333;
-        margin-bottom: 8px;
+    .pricing-content .section-title {
+        color: white; 
     }
 
-    .process-step p {
+    .pricing-card {
+        background-color: #e2ede5; 
+        color: #2d2a35;
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 40px;
+        border-radius: 12px;
+    }
+
+    .fee-label {
         font-size: 0.9rem;
-        color: #777;
-        line-height: 1.4;
+        text-transform: capitalize;
+        margin-bottom: 10px;
     }
 
+    .price {
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: flex;         
+        justify-content: center;
+        align-items: baseline; 
+        gap: 4px;
+    }
+
+    .per-unit {
+        font-size: 1.5rem;  
+        font-weight: 400;   
+        color: #555;     
+    }
+
+    .flat-rate {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 25px;
+        opacity: 0.8;
+    }
+
+    .cta-btn {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #70846e;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background 0.3s;
+    }
+
+    .cta-btn:hover {
+        background-color: #5a6b58;
+    }
+
+    /* 3. RESPONSIVE DESIGN */
     @media (max-width: 768px) {
-        .process-wrapper {
+        .section-padding { padding: 50px 20px; }
+        
+        .process-wrapper, .wyr-card-grid {
             flex-direction: column;
             align-items: center;
             gap: 40px;
         }
-        
-        .connector-line {
-            display: none; 
-        }
+
+        .connector-line { display: none; }
     }
 
-    /* -------------------------------- Services Page - MAA ------------------------------- */
-
-    /* -------------------------------- Services Page - PPD ------------------------------- */
-
-    /* -------------------------------- Services Page - PPS ------------------------------- */
-
-    /* -------------------------------- Services Page - FSC ------------------------------- */
-    
 
     /* -------------------------------- FAQs Page -------------------------------- */
-    /* FAQs */
     .faq-category {
         max-width: 1500px;   
         margin: 20px auto 10px; 
@@ -733,7 +829,7 @@
     }
 
     .faq-header.active .icon {
-        transform: rotate(45deg); /* Turns + into x when open */
+        transform: rotate(45deg); 
     }
 
     .faq-content {
@@ -745,7 +841,7 @@
 
     .faq-content.open {
         padding: 8px 16px;
-        max-height: 500px; /* adjust if content is taller */
+        max-height: 500px; 
     }
 
 
@@ -928,7 +1024,7 @@
     }
 
     #form-status {
-        display: none; /* Hidden by default */
+        display: none; 
         margin-top: 20px;
         padding: 15px;
         border-radius: 5px;
