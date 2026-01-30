@@ -426,6 +426,43 @@
     }
 
     /* -------------------------------- About Page ------------------------------- */
+    .about-container {
+        max-width: 900px;          
+        margin: 0 auto;             
+        padding: 40px 20px;         
+        text-align: center;         
+        box-sizing: border-box;    
+    }
+
+    .about-container h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem); 
+        margin-bottom: 0px;
+    }
+
+    .about-container h4 {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        margin-bottom: 30px;
+        font-weight: 400;
+        color: #555;                 
+    }
+
+    .about-container p {
+        font-size: clamp(1rem, 1.7vw, 1.2rem); 
+        line-height: 1.8;
+        margin-bottom: 20px;
+        color: #333;
+        text-align: left;
+    }
+
+    .about-container a {
+        color: var(--accent-color);
+        text-decoration: underline;
+    }
+
+    .about-container a:hover {
+        color: var(--main-color);
+        text-decoration: none;
+    }
 
     /* -------------------------------- Services Page ------------------------------- */
 
