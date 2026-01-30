@@ -592,6 +592,99 @@
         }
     }
 
+    /* -------------------------------- Services Pages ------------------------------- */
+    .how-it-works {
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 60px;
+        font-weight: 600;
+    }
+
+    .how-it-works .hiw-container {
+        background-color: #ffffff;
+        max-width: 1200px; 
+        margin: 0 auto;
+        padding: 60px 40px; 
+        border-radius: 12px; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+    }
+
+    .process-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative; 
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .connector-line {
+        position: absolute;
+        top: 40px; 
+        left: 10%;
+        right: 10%;
+        height: 2px;
+        border-top: 2px dashed #ccc;
+        z-index: 1;
+    }
+
+    .process-step {
+        flex: 1;
+        position: relative;
+        z-index: 2; 
+        padding: 0 10px;
+    }
+
+    .icon-circle {
+        width: 80px;
+        height: 80px;
+        background-color: white;
+        border: 2px solid #8c83a1; 
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 1.8rem;
+        color: #8c83a1;
+        transition: all 0.3s ease;
+    }
+
+    .process-step:hover .icon-circle {
+        background-color: #8c83a1;
+        color: white;
+        transform: scale(1.1);
+    }
+
+    .process-step h3 {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 8px;
+    }
+
+    .process-step p {
+        font-size: 0.9rem;
+        color: #777;
+        line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+        .process-wrapper {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .connector-line {
+            display: none; 
+        }
+    }
+
     /* -------------------------------- Services Page - MAA ------------------------------- */
 
     /* -------------------------------- Services Page - PPD ------------------------------- */
@@ -599,10 +692,9 @@
     /* -------------------------------- Services Page - PPS ------------------------------- */
 
     /* -------------------------------- Services Page - FSC ------------------------------- */
-
-    /* -------------------------------- FAQs Page -------------------------------- */
     
 
+    /* -------------------------------- FAQs Page -------------------------------- */
     /* FAQs */
     .faq-category {
         max-width: 1500px;   
