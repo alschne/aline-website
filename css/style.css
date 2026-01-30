@@ -34,7 +34,7 @@
     header {
       background-color: var(--main-color);
       color: var(--neutral-bg);
-      padding: 20px 50px;
+      padding: 10px 50px;
       display: flex;
       justify-content: space-between;
       align-items: center;
