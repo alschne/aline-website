@@ -30,7 +30,7 @@
       border: none;
     }
 
-    /* Header */
+    /* -------------------------------- Header -------------------------------- */
     header {
       background-color: var(--main-color);
       color: var(--neutral-bg);
@@ -91,6 +91,7 @@
       text-decoration: underline;
     }
 
+    /* -------------------------------- Home Page -------------------------------- */
     /* Hero Section */
     .hero {
         display: flex;
@@ -178,7 +179,6 @@
     .btn-learn:hover {
         opacity: 0.9;
     }
-
 
     /* Sections */
     .features {
@@ -365,7 +365,157 @@
       margin-top: 5px;
     }
 
-    /* Footer */
+    /* -------------------------------- FAQs Page -------------------------------- */
+    .faq-hero {
+        display: flex;
+        align-items: stretch;           
+        position: relative;
+        background-color: var(--main-color);
+        color: var(--neutral-bg);
+        overflow: hidden;
+        max-height: 200px;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .faq-hero-text {
+        flex: 1;                        
+        padding: 20px 10px;            
+        display: flex;
+        flex-direction: column;
+        justify-content: center;        
+        align-items: flex-start;
+        gap: 20px;                      
+        padding: 50px;
+    }
+    .faq-hero-img {
+        flex: 1;
+        position: relative;     
+        background-image: url('/images/laptop-on-desk.png');
+        background-size: cover;     
+        background-position: center; 
+    }
+    .faq-hero-img::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;                        
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, var(--main-color), transparent); 
+        pointer-events: none;
+    }
+
+    .faq-hero-text h1 {
+        font-size: 2.5rem;
+        margin: 0 0 5px 0;
+    }
+    .faq-hero-text h1::after {
+        content: "";
+        display: block;
+        width: 550px;             
+        height: 1px;            
+        background-color: var(--neutral-bg);
+        margin-top: 10px;        
+        margin: 0px auto 0 auto;
+    }
+    .faq-hero-text h3 {
+        font-weight: 400;
+        margin-bottom: 20px;
+        color: var(--neutral-bg);
+    }
+    .faq-hero-text p {
+        margin-bottom: 20px;
+    }
+
+    /* FAQs */
+    .faq-category {
+        max-width: 1500px;   
+        margin: 20px auto 10px; 
+        padding-left: 16px;    
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .faq-item {
+        background: #f2f2f7;
+        border-radius: 8px;
+        margin: 0 auto 10px;
+        max-width: 1450px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        padding: 8px 32px;
+    }
+
+    .faq-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .faq-header:hover {
+        background: #e0e0e8;
+    }
+
+    .faq-header .icon {
+        font-size: 18px;
+        transition: transform 0.3s ease;
+    }
+
+    .faq-header.active .icon {
+        transform: rotate(45deg); /* Turns + into x when open */
+    }
+
+    .faq-content {
+        padding: 0 16px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-content.open {
+        padding: 8px 16px;
+        max-height: 500px; /* adjust if content is taller */
+    }
+
+
+    .faq-mid-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 40px;
+        margin: 0;
+        text-align: center;
+    }
+    .faq-mid-text h2::after {
+        content: "";
+        display: block;
+        width: 350px;          
+        height: 1px;         
+        background-color: var(--main-color);
+        margin: 0px auto 8 auto;
+    }
+
+    .get-in-touch-btn {
+        display: block;
+        width: fit-content;
+        margin: 10px auto 50px; 
+        background-color: var(--accent-color);
+        color: var(--neutral-bg);
+        padding: 12px 30px;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+    .get-in-touch-btn:hover {
+        opacity: 0.9;
+    }
+
+    /* -------------------------------- Footer -------------------------------- */
     footer {
         background-color: var(--main-color);
         color: var(--neutral-bg);
