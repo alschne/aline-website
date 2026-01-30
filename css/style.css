@@ -1298,15 +1298,20 @@
 
     /* Responsive */
     @media(max-width: 900px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-      .features {
-        flex-direction: column;
-      }
-      footer {
-        flex-direction: column;
-        text-align: center;
-      }
+        .hero {
+            flex-direction: column;
+            text-align: center;
+        }
+        .features {
+            flex-direction: column;
+        }
+        footer {
+            flex-direction: column;
+            text-align: center;
+        }
+        footer h4::after {
+            margin-left: auto;
+            margin-right: auto;
+            /* This forces the 100px line to center regardless of text length */
+        }
     }
