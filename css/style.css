@@ -1306,7 +1306,7 @@
             flex-direction: column;
         }
         .footer-columns {
-            gap: 30px; 
+            gap: 10px; 
         }
         footer {
             flex-direction: column;
