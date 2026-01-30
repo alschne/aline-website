@@ -120,6 +120,102 @@
       text-decoration: underline;
     }
 
+    .menu-toggle, .hamburger {
+        display: none; /* Hide by default */
+    }
+
+    /* --- Mobile Styles --- */
+    @media (max-width: 768px) {
+        header {
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        /* Show Hamburger */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--neutral-bg);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* The Navigation Menu Overlay */
+        nav {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: var(--main-color);
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px 0;
+            z-index: 9999;
+            display: none; /* Hidden until toggled */
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        nav a, .dropdown-btn {
+            margin: 15px 30px;
+            font-size: 1.2rem;
+        }
+
+        /* Toggle Logic */
+        .menu-toggle:checked ~ nav {
+            display: flex !important;
+        }
+
+        /* Animate Hamburger to an 'X' when checked */
+        .menu-toggle:checked + .hamburger span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .menu-toggle:checked + .hamburger span:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-toggle:checked + .hamburger span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* Dropdown adjustment for Mobile */
+        .dropdown-content {
+            display: block !important; 
+            position: static;         
+            background-color: var(--main-color); 
+            box-shadow: none;
+            padding: 0;
+            width: 100%;
+        }
+
+        .dropdown-content a {
+            padding: 12px 0 12px 60px !important; 
+            margin: 0 !important;
+            font-size: 1rem;
+            opacity: 0.9;
+            border-left: 2px solid rgba(255, 255, 255, 0.3); 
+        }
+
+        .dropdown-btn {
+            margin-bottom: 5px !important;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    }
+
+    /* Hidden checkbox */
+    .menu-toggle {
+        display: none;
+    }
+
     /* -------------------------------- Home Page -------------------------------- */
     /* Hero Section */
     .hero {
@@ -911,7 +1007,7 @@
     }
 
     .faq-item {
-        background: #f2f2f7;
+        background: #ffffff;
         border-radius: 8px;
         margin: 0 auto 10px;
         max-width: 1450px;
