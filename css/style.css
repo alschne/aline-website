@@ -461,10 +461,14 @@
     /* -------------------------------- About Page ------------------------------- */
     .about-container {
         max-width: 900px;          
-        margin: 0 auto;             
+        margin: 70px auto 70px;             
         padding: 40px 20px;         
-        text-align: center;         
-        box-sizing: border-box;    
+        text-align: center;      
+        align-items: center;   
+        box-sizing: border-box; 
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
     }
 
     .about-container h2 {
@@ -484,7 +488,12 @@
         line-height: 1.8;
         margin-bottom: 20px;
         color: #333;
-        text-align: left;
+        text-align: justify;
+        text-justify: inter-word;
+        text-align-last: left;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .about-container a {
