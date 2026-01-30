@@ -23,17 +23,35 @@ async function loadHTML(id, file) {
 
 // Load the header and footer on every page that includes this script.
 loadHTML("header", "/header.html").then(() => {
-  const currentPath = window.location.pathname;
-
-  document.querySelectorAll("nav a").forEach(link => {
-    const linkPath = link.getAttribute("href");
-
-    if (
-      linkPath === currentPath ||
-      (linkPath !== "/" && currentPath !== "/" && currentPath.startsWith(linkPath))
-    ) {
-      link.classList.add("active");
+  let currentPath = window.location.pathname;
+    if (currentPath.length > 1 && currentPath.endsWith('/')) {
+      currentPath = currentPath.slice(0, -1);
     }
+
+    document.querySelectorAll("nav a").forEach(link => {
+      // 2. Get the link path and normalize it the same way
+      let linkPath = link.getAttribute("href");
+      let normalizedLinkPath = linkPath;
+      
+      if (normalizedLinkPath.length > 1 && normalizedLinkPath.endsWith('/')) {
+        normalizedLinkPath = normalizedLinkPath.slice(0, -1);
+      }
+
+      // 3. Clear existing active classes (prevents duplicates)
+      link.classList.remove("active");
+
+      // 4. Logic for active state
+      if (normalizedLinkPath === currentPath) {
+        // Direct match (Home, About, FAQ, etc.)
+        link.classList.add("active");
+      } 
+      else if (
+        normalizedLinkPath !== "/" && 
+        currentPath.startsWith(normalizedLinkPath)
+      ) {
+        // Section match (e.g., highlighting "Services" while on a sub-service page)
+        link.classList.add("active");
+      }
+    });
   });
-});
 loadHTML("footer", "/footer.html");

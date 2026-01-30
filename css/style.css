@@ -61,7 +61,7 @@
         font-size: 1.5rem;
         color: var(--light1);
         font-weight: 600;
-        -webkit-text-stroke: 1px var(--secondary-color);
+        /* -webkit-text-stroke: 1px var(--secondary-color); */
     }
 
     .logo-link:hover h2 {
