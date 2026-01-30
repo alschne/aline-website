@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Aline Analytics</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div id="header"></div>
+  <main class="container">
+
+    <section class="page-hero">
+        <div class="page-hero-text">
+            <h1>Contact Us</h1>
+            <h3>Start the conversation to move your business forward</h3>
+            <div class="con-hero-btn">
+                <a href="/faq/" class="btn con-btn-learn">Learn More</a>
+            </div>
+        </div>
+        <div class="page-hero-img"></div>
+    </section>
+
+    <main class="contact-container">
+        <div class="contact-card">
+            <div class="contact-form">
+                <form id="contact-form" action="https://formspree.io/f/mykjprgq" method="POST">
+                    <div class="input-group">
+                        <label>Your Name</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Your Email</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Phone Number (Optional)</label>
+                        <input type="text" name="phone">
+                    </div>
+                    <div class="input-group">
+                        <label>Your Message</label>
+                        <textarea name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-send" id="submit-btn">Send Message</button>
+                </form>
+                
+                <div id="form-status" style="display:none; margin-top: 20px; padding: 10px; border-radius: 5px;"></div>
+            </div>            
+
+            <div class="contact-info">
+                <div class="contact-info-title">
+                  <h3>Contact Info</h3>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope contact-icon"></i>
+                    <a href="mailto:allieroth@alineanalytics.com" class="contact-link">allieroth@alineanalytics.com</a>
+                </div>
+                <!-- <div class="info-item">
+                    <span>📞 +122 36 67 8900</span>
+                </div> -->
+                <!-- <div class="info-item">
+                    <span>📍 123 Business St, City, ST 12345</span>
+                </div> -->
+                <!-- <div class="map-box">
+                    <p><strong>Find Us Here</strong></p>
+                    <div class="mock-map">
+                        <div class="pin"></div>
+                    </div>
+                </div> -->
+                <div class="social-icon">
+                    <a href="https://www.instagram.com/alineanalytics/" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                        @alineanalytics
+                    </a>
+                </div>
+                <div class="contact-info-p">
+                  <p>Have a question or want to start a project? Send us a message, and let's connect. We're excited to hear from you!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+  </main>
+
+  <div id="footer"></div>
+  <script src="/includes.js"></script>
+  <script src="contact-form.js"></script>
+
+</body>
+</html>

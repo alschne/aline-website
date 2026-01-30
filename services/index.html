@@ -3,18 +3,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aline Analytics Services</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div id="header"></div>
-    <main class="container">
-        <h1>Our Services</h1>
+
+  <div id="header"></div>
+  <main class="container">
+
+    <section class="page-hero">
+        <div class="page-hero-text">
+            <h1>Our Services</h1>
+            <h3>Solutions, strategies, and expertise that drive growth</h3>
+        </div>
+        <div class="page-hero-img"></div>
+    </section>
+
+    <section class="services-container">
         <div class="services-grid">
-            <div class="service-card">
-                <h2>Market Alignment Audit</h2>
+            <a href="/services/maa/" class="service-card">
+                <i class="fa-solid fa-chart-line card-icon"></i>
+                <h3>Market Alignment Audit</h3>
                 <p>
                     Analyze your current compensation practices against
                     trusted market data to pinpoint gaps, equity issues,
@@ -25,10 +37,11 @@
                     <br>
                     Cost: $150 per hour
                 </p>
-                <a class="service-btn" href="maa/">Learn More</a>
-            </div>
-            <div class="service-card">
-                <h2>Performance Pay Design</h2>
+            </a>
+
+            <a href="/services/ppd/" class="service-card">
+                <i class="fa-solid fa-trophy card-icon"></i>
+                <h3>Performance Pay Design</h3>
                 <p>
                     Create a bonus structure that motivates the right behaviors
                     and aligns payouts with results - paired with a calculation model
@@ -39,10 +52,11 @@
                     <br>
                     Cost: $200 per hour
                 </p>
-                <a class="service-btn" href="ppd/">Learn More</a>
-            </div>
-            <div class="service-card">
-                <h2>Pay Progression Strategy</h2>
+            </a>
+
+            <a href="/services/pps/" class="service-card">
+                <i class="fa-solid fa-stairs card-icon"></i>
+                <h3>Pay Progression Strategy</h3>
                 <p>
                     Build a fair, defensible raise framework that rewards
                     performance, supports retention, and keeps salaries
@@ -54,10 +68,11 @@
                     <br>
                     Cost: $175 per hour
                 </p>
-                <a class="service-btn" href="pps/">Learn More</a>
-            </div>
-            <div class="service-card">
-                <h2>Full Spectrum Compensation</h2>
+            </a>
+
+            <a href="/services/fsc/" class="service-card">
+                <i class="fa-solid fa-diagram-project card-icon"></i>
+                <h3>Full Spectrum Compensation</h3>
                 <p>
                     A complete compensation system combining Market Alignment,
                     Pay Progression, and Performance Pay into one integrated 
@@ -67,13 +82,34 @@
                     Includes: Your full custom compensation model built in
                     an interactive Excel tool.
                     <br>
-                    Cost: $325 per hour
+                    Cost: $350 per hour
                 </p>
-                <a class="service-btn" href="fsc/">Learn More</a>
-            </div>
-        </main>
-    </div>
-    <div id="footer"></div>
-    <script src="../includes.js"></script>
+            </a>
+
+            <!-- <a href="#" class="service-card partnership-card">
+                <div class="partnership-content">
+                    <div class="profile-section">
+                        <img src="https://via.placeholder.com/100" alt="Faamy Clain" class="profile-img">
+                        <h4>Partnership</h4>
+                        <span>Faamy Clain</span>
+                    </div>
+                    <div class="dev-section">
+                        <i class="fa-solid fa-code card-icon"></i>
+                        <h3>Web Development</h3>
+                        <p>Building modern, responsive websites and applications for a strong online presence.</p>
+                    </div>
+                </div>
+            </a> -->
+        </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+  <script src="/includes.js"></script>
+
 </body>
+</html>
+
+
 
