@@ -120,6 +120,102 @@
       text-decoration: underline;
     }
 
+    .menu-toggle, .hamburger {
+        display: none; /* Hide by default */
+    }
+
+    /* --- Mobile Styles --- */
+    @media (max-width: 768px) {
+        header {
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        /* Show Hamburger */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--neutral-bg);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* The Navigation Menu Overlay */
+        nav {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: var(--main-color);
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px 0;
+            z-index: 9999;
+            display: none; /* Hidden until toggled */
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        nav a, .dropdown-btn {
+            margin: 15px 30px;
+            font-size: 1.2rem;
+        }
+
+        /* Toggle Logic */
+        .menu-toggle:checked ~ nav {
+            display: flex !important;
+        }
+
+        /* Animate Hamburger to an 'X' when checked */
+        .menu-toggle:checked + .hamburger span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .menu-toggle:checked + .hamburger span:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-toggle:checked + .hamburger span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* Dropdown adjustment for Mobile */
+        .dropdown-content {
+            display: block !important; 
+            position: static;         
+            background-color: var(--main-color); 
+            box-shadow: none;
+            padding: 0;
+            width: 100%;
+        }
+
+        .dropdown-content a {
+            padding: 12px 0 12px 60px !important; 
+            margin: 0 !important;
+            font-size: 1rem;
+            opacity: 0.9;
+            border-left: 2px solid rgba(255, 255, 255, 0.3); 
+        }
+
+        .dropdown-btn {
+            margin-bottom: 5px !important;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    }
+
+    /* Hidden checkbox */
+    .menu-toggle {
+        display: none;
+    }
+
     /* -------------------------------- Home Page -------------------------------- */
     /* Hero Section */
     .hero {
@@ -398,6 +494,42 @@
       margin-top: 5px;
     }
 
+    @media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Stacks text on top of image */
+        max-height: none;       /* Allows content to grow naturally */
+    }
+
+    .hero-text {
+        padding: 40px 20px;     /* Give it some breathing room */
+        align-items: center;    /* Center text for a better mobile look */
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;        /* Slightly smaller text for mobile */
+    }
+
+    .hero-text h1::after {
+        width: 100%;            /* Prevent the line from breaking the layout */
+        max-width: 200px;       /* Keep it a reasonable size */
+    }
+
+    .hero-img {
+        height: 250px;          /* Give the image a fixed height on mobile */
+        width: 100%;
+    }
+
+    .hero-img::before {
+        /* Change gradient from side-to-side to top-to-bottom */
+        background: linear-gradient(to bottom, var(--main-color), transparent);
+    }
+
+    .hero-btn {
+        justify-content: center;
+    }
+}
+
     /* -------------------------------- Page Heros ------------------------------- */
     .page-hero {
         display: flex;
@@ -457,6 +589,42 @@
         margin-bottom: 0px;
         color: var(--neutral-bg);
     }
+
+    @media (max-width: 768px) {
+    .page-hero {
+        flex-direction: column; /* Stacks text on top of image */
+        max-height: none;       /* Allows content to grow naturally */
+    }
+
+    .page-hero-text {
+        padding: 40px 20px;     /* Give it some breathing room */
+        align-items: center;    /* Center text for a better mobile look */
+        text-align: center;
+    }
+
+    .page-hero-text h1 {
+        font-size: 2rem;        /* Slightly smaller text for mobile */
+    }
+
+    .page-hero-text h1::after {
+        width: 100%;            /* Prevent the line from breaking the layout */
+        max-width: 200px;       /* Keep it a reasonable size */
+    }
+
+    .page-hero-img {
+        height: 250px;          /* Give the image a fixed height on mobile */
+        width: 100%;
+    }
+
+    .page-hero-img::before {
+        /* Change gradient from side-to-side to top-to-bottom */
+        background: linear-gradient(to bottom, var(--main-color), transparent);
+    }
+
+    .page-hero-btn {
+        justify-content: center;
+    }
+}
 
     /* -------------------------------- About Page ------------------------------- */
     .about-container {
@@ -839,7 +1007,7 @@
     }
 
     .faq-item {
-        background: #f2f2f7;
+        background: #ffffff;
         border-radius: 8px;
         margin: 0 auto 10px;
         max-width: 1450px;
@@ -1130,15 +1298,20 @@
 
     /* Responsive */
     @media(max-width: 900px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-      .features {
-        flex-direction: column;
-      }
-      footer {
-        flex-direction: column;
-        text-align: center;
-      }
+        .hero {
+            flex-direction: column;
+            text-align: center;
+        }
+        .features {
+            flex-direction: column;
+        }
+        footer {
+            flex-direction: column;
+            text-align: center;
+        }
+        footer h4::after {
+            margin-left: auto;
+            margin-right: auto;
+            /* This forces the 100px line to center regardless of text length */
+        }
     }
