@@ -398,6 +398,42 @@
       margin-top: 5px;
     }
 
+    @media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Stacks text on top of image */
+        max-height: none;       /* Allows content to grow naturally */
+    }
+
+    .hero-text {
+        padding: 40px 20px;     /* Give it some breathing room */
+        align-items: center;    /* Center text for a better mobile look */
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;        /* Slightly smaller text for mobile */
+    }
+
+    .hero-text h1::after {
+        width: 100%;            /* Prevent the line from breaking the layout */
+        max-width: 200px;       /* Keep it a reasonable size */
+    }
+
+    .hero-img {
+        height: 250px;          /* Give the image a fixed height on mobile */
+        width: 100%;
+    }
+
+    .hero-img::before {
+        /* Change gradient from side-to-side to top-to-bottom */
+        background: linear-gradient(to bottom, var(--main-color), transparent);
+    }
+
+    .hero-btn {
+        justify-content: center;
+    }
+}
+
     /* -------------------------------- Page Heros ------------------------------- */
     .page-hero {
         display: flex;
@@ -457,6 +493,42 @@
         margin-bottom: 0px;
         color: var(--neutral-bg);
     }
+
+    @media (max-width: 768px) {
+    .page-hero {
+        flex-direction: column; /* Stacks text on top of image */
+        max-height: none;       /* Allows content to grow naturally */
+    }
+
+    .page-hero-text {
+        padding: 40px 20px;     /* Give it some breathing room */
+        align-items: center;    /* Center text for a better mobile look */
+        text-align: center;
+    }
+
+    .page-hero-text h1 {
+        font-size: 2rem;        /* Slightly smaller text for mobile */
+    }
+
+    .page-hero-text h1::after {
+        width: 100%;            /* Prevent the line from breaking the layout */
+        max-width: 200px;       /* Keep it a reasonable size */
+    }
+
+    .page-hero-img {
+        height: 250px;          /* Give the image a fixed height on mobile */
+        width: 100%;
+    }
+
+    .page-hero-img::before {
+        /* Change gradient from side-to-side to top-to-bottom */
+        background: linear-gradient(to bottom, var(--main-color), transparent);
+    }
+
+    .page-hero-btn {
+        justify-content: center;
+    }
+}
 
     /* -------------------------------- About Page ------------------------------- */
     .about-container {
