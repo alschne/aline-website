@@ -1,0 +1,13 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Eleventy
+_site/
+
+# Scratch / backups
+scratch/
+
+# OS files
+.DS_Store
+Thumbs.db
