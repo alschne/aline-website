@@ -1,0 +1,51 @@
+---
+layout: base.njk
+---
+
+<article class="article-page">
+
+  <!-- Hero — matches .page-hero pattern from the rest of the site -->
+  <div class="page-hero">
+    <div class="page-hero-text">
+      <h1>{{ title }}</h1>
+      <h3><time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time></h3>
+    </div>
+    {% if image %}
+    <div class="page-hero-img" style="background-image: url('{{ image }}');"></div>
+    {% else %}
+    <div class="page-hero-img" style="background-image: url('/images/laptop-on-desk.png');"></div>
+    {% endif %}
+  </div>
+
+  <div class="article-content-wrapper">
+
+    <!-- Article body — rendered from Markdown -->
+    <div class="article-body">
+      {{ content | safe }}
+    </div>
+
+    <!-- Related articles — only shown if frontmatter includes a `related` list -->
+    {% if related and related.length %}
+    <aside class="article-related">
+      <h3>Related articles</h3>
+      <ul>
+        {% for slug in related %}
+          {% set relatedPost = collections.articles | getBySlug(slug) %}
+          {% if relatedPost %}
+            <li>
+              <a href="{{ relatedPost.url }}">{{ relatedPost.data.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </aside>
+    {% endif %}
+
+    <!-- Back link -->
+    <a href="/articles/" class="article-back">
+      <i class="fa-solid fa-arrow-left"></i> Back to all articles
+    </a>
+
+  </div>
+
+</article>

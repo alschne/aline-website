@@ -1,0 +1,25 @@
+{
+  "name": "aline-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "includes.js",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alschne/aline-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alschne/aline-website/issues"
+  },
+  "homepage": "https://github.com/alschne/aline-website#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  }
+}

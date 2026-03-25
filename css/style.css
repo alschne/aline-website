@@ -1317,3 +1317,330 @@
             margin-right: auto;
         }
     }
+
+
+/* -------------------------------- Articles Page -------------------------------- */
+ 
+    .articles-container {
+      max-width: 1100px;
+      margin: 60px auto 80px;
+      padding: 0 20px;
+    }
+ 
+    /* --- Filter Bar --- */
+    .articles-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+ 
+    .articles-count {
+      font-size: 0.9rem;
+      color: #888;
+    }
+ 
+    /* --- Grid --- */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+ 
+    /* --- Card --- */
+    .article-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+      padding: 0;                /* image bleeds to edges — padding moves to .article-card-body */
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
+      overflow: hidden;          /* clips the image to the card's border-radius */
+    }
+ 
+    .article-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+    }
+ 
+    /* Image sits flush at the top of the card */
+    .article-card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+ 
+    .article-card:hover .article-card-img {
+      transform: scale(1.03);   /* subtle zoom on hover */
+    }
+ 
+    /* Text content area gets the padding the card used to have */
+    .article-card-body {
+      padding: 24px 28px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 1;                   /* pushes footer to bottom even if titles vary in length */
+    }
+ 
+    .article-card-date {
+      font-size: 0.8rem;
+      color: #999;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+ 
+    .article-card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--main-color);
+      line-height: 1.4;
+      margin: 0;
+    }
+ 
+    /* The accent line at the bottom of each card — mirrors your h4::after pattern */
+    .article-card-footer {
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+ 
+    .article-card-read {
+      font-size: 0.85rem;
+      color: var(--accent-color);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s ease;
+    }
+ 
+    .article-card:hover .article-card-read {
+      gap: 10px;
+    }
+ 
+    .article-card-read i {
+      font-size: 0.75rem;
+    }
+ 
+    /* --- Empty state (shown when no articles yet) --- */
+    .articles-empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 80px 20px;
+      color: #aaa;
+    }
+ 
+    .articles-empty i {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      display: block;
+      color: var(--light1);
+    }
+ 
+    /* --- Responsive --- */
+    @media (max-width: 900px) {
+      .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+ 
+    @media (max-width: 600px) {
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+ 
+      .articles-meta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+
+    /* -------------------------------- Article Pages (Eleventy) -------------------------------- */
+
+    /* Hero image banner at the top of each article */
+    /* .article-hero {
+    width: 100%;
+    height: 320px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    } */
+
+    /* Constrained content column */
+    .article-content-wrapper {
+    max-width: 780px;
+    margin: 60px auto 80px;
+    padding: 0 20px;
+    }
+
+    /* Article title + date */
+    .article-header {
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+    }
+
+    .article-header h1 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    color: var(--main-color);
+    line-height: 1.25;
+    margin-bottom: 12px;
+    }
+
+    .article-header time {
+    font-size: 0.85rem;
+    color: #999;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    }
+
+    /* Article body — styles all the markdown-generated HTML */
+    .article-body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+    }
+
+    .article-body h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--main-color);
+    margin: 48px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    }
+
+    .article-body h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--main-color);
+    margin: 32px 0 12px;
+    }
+
+    .article-body p {
+    margin-bottom: 24px;
+    }
+
+    .article-body ul,
+    .article-body ol {
+    margin: 0 0 24px 24px;
+    }
+
+    .article-body li {
+    margin-bottom: 8px;
+    }
+
+    .article-body a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    }
+
+    .article-body a:hover {
+    color: var(--main-color);
+    }
+
+    .article-body strong {
+    font-weight: 600;
+    color: var(--main-color);
+    }
+
+    .article-body blockquote {
+    border-left: 3px solid var(--accent-color);
+    margin: 32px 0;
+    padding: 12px 24px;
+    background-color: var(--neutral-bg);
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    color: #555;
+    }
+
+    /* Related articles sidebar */
+    .article-related {
+    margin: 56px 0 40px;
+    padding: 28px 32px;
+    background: var(--neutral-bg);
+    border-radius: 12px;
+    }
+
+    .article-related h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--main-color);
+    margin-bottom: 16px;
+    }
+
+    .article-related ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
+
+    .article-related a {
+    color: var(--accent-color);
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.95rem;
+    }
+
+    .article-related a:hover {
+    text-decoration: underline;
+    }
+
+    /* Back link */
+    .article-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--main-color);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+    }
+
+    .article-back:hover {
+    opacity: 1;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+    /* .article-hero {
+        height: 220px;
+    } */
+
+    .article-content-wrapper {
+        margin: 40px auto 60px;
+    }
+    }
+
+    /* Article page hero — slightly smaller h1 to prevent long titles wrapping */
+    .article-page .page-hero-text h1 {
+    font-size: 2rem;
+    }
+
+    .article-page .page-hero-text h1::after {
+    width: 100%;
+    }

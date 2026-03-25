@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | Aline Analytics</title>
+  <meta name="description" content="{{ description }}">
+
+  <!-- Open Graph tags (improves link previews on LinkedIn, Slack, etc.) -->
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  {% if image %}
+  <meta property="og:image" content="{{ image }}">
+  {% endif %}
+  <meta property="og:type" content="article">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Same stylesheet as the rest of your site -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Header — same includes.js as every other page -->
+  <div id="header"></div>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <!-- Footer — same includes.js as every other page -->
+  <div id="footer"></div>
+  <script src="/includes.js"></script>
+
+</body>
+</html>
