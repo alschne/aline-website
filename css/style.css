@@ -1317,3 +1317,154 @@
             margin-right: auto;
         }
     }
+
+
+/* -------------------------------- Articles Page -------------------------------- */
+ 
+    .articles-container {
+      max-width: 1100px;
+      margin: 60px auto 80px;
+      padding: 0 20px;
+    }
+ 
+    /* --- Filter Bar --- */
+    .articles-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+ 
+    .articles-count {
+      font-size: 0.9rem;
+      color: #888;
+    }
+ 
+    /* --- Grid --- */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+ 
+    /* --- Card --- */
+    .article-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+      padding: 0;                /* image bleeds to edges — padding moves to .article-card-body */
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
+      overflow: hidden;          /* clips the image to the card's border-radius */
+    }
+ 
+    .article-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+    }
+ 
+    /* Image sits flush at the top of the card */
+    .article-card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+ 
+    .article-card:hover .article-card-img {
+      transform: scale(1.03);   /* subtle zoom on hover */
+    }
+ 
+    /* Text content area gets the padding the card used to have */
+    .article-card-body {
+      padding: 24px 28px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 1;                   /* pushes footer to bottom even if titles vary in length */
+    }
+ 
+    .article-card-date {
+      font-size: 0.8rem;
+      color: #999;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+ 
+    .article-card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--main-color);
+      line-height: 1.4;
+      margin: 0;
+    }
+ 
+    /* The accent line at the bottom of each card — mirrors your h4::after pattern */
+    .article-card-footer {
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+ 
+    .article-card-read {
+      font-size: 0.85rem;
+      color: var(--accent-color);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s ease;
+    }
+ 
+    .article-card:hover .article-card-read {
+      gap: 10px;
+    }
+ 
+    .article-card-read i {
+      font-size: 0.75rem;
+    }
+ 
+    /* --- Empty state (shown when no articles yet) --- */
+    .articles-empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 80px 20px;
+      color: #aaa;
+    }
+ 
+    .articles-empty i {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      display: block;
+      color: var(--light1);
+    }
+ 
+    /* --- Responsive --- */
+    @media (max-width: 900px) {
+      .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+ 
+    @media (max-width: 600px) {
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+ 
+      .articles-meta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }

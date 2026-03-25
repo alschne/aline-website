@@ -1,0 +1,121 @@
+<!-- Articles -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWZFZTF7LP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-CWZFZTF7LP');
+    </script>
+    <meta property="og:title" content="Aline Analytics Services"/>
+    <meta property="og:description" content="Stop guessing on pay. Empower your leaders with market-aligned compensation data to hire faster and retain talent with total transparency."/>
+    <meta property="og:image" content="https://www.yourdomain.com/images/Aline Logo.png"/>
+    <meta property="og:url" content="https://www.alineanalytics.com"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aline Analytics Services">
+    <meta name="twitter:description" content="Stop guessing on pay. Empower your leaders with market-aligned compensation data to hire faster and retain talent with total transparency.">
+    <meta name="twitter:image" content="https://www.alineanalytics.com/images/Aline Logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aline Analytics Services</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div id="header"></div>
+  <main class="container">
+
+    <section class="page-hero">
+        <div class="page-hero-text">
+            <h1>Articles</h1>
+            <h3>Insights on compensation, hiring, and people strategy</h3>
+        </div>
+        <div class="page-hero-img"></div>
+    </section>
+
+    <section class="articles-container">
+
+        <div class="articles-meta">
+            <span class="articles-count" id="article-count"></span>
+        </div>
+
+        <div class="articles-grid" id="articles-grid">
+
+            <!--
+                HOW THIS WORKS (before Eleventy):
+                Each article is a card below. When you add a new article:
+                1. Duplicate one of the <a class="article-card"> blocks
+                2. Update the href, date, and title
+                Once Eleventy is wired up, this whole section gets replaced
+                by a Nunjucks loop and these cards are generated automatically.
+            -->
+
+            <!-- Article Card -->
+            <a class="article-card" href="#">
+                <img class="article-card-img" src="/images/article-salary-benchmarking.jpg" alt="What Salary Benchmarking Actually Is">
+                <div class="article-card-body">
+                <span class="article-card-date">March 22, 2026</span>
+                <h2 class="article-card-title">What Salary Benchmarking Actually Is</h2>
+                <div class="article-card-footer">
+                    <span class="article-card-read">Read article <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                </div>
+            </a>
+        
+            <!-- Article Card -->
+            <a class="article-card" href="#">
+                <img class="article-card-img" src="/images/article-fractional-hr.jpg" alt="When to Hire a Fractional HR Leader">
+                <div class="article-card-body">
+                <span class="article-card-date">February 14, 2026</span>
+                <h2 class="article-card-title">When to Hire a Fractional HR Leader</h2>
+                <div class="article-card-footer">
+                    <span class="article-card-read">Read article <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                </div>
+            </a>
+        
+            <!-- Article Card -->
+            <a class="article-card" href="#">
+                <img class="article-card-img" src="/images/article-cost-of-bad-hire.jpg" alt="The Real Cost of a Bad Hire">
+                <div class="article-card-body">
+                <span class="article-card-date">January 8, 2026</span>
+                <h2 class="article-card-title">The Real Cost of a Bad Hire</h2>
+                <div class="article-card-footer">
+                    <span class="article-card-read">Read article <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                </div>
+            </a>
+        
+            <!--
+                ADD NEW CARDS ABOVE THIS LINE.
+                Template to copy:
+        
+                <a class="article-card" href="/articles/your-slug/">
+                <img class="article-card-img" src="/images/your-image.jpg" alt="Your Article Title">
+                <div class="article-card-body">
+                    <span class="article-card-date">Month DD, YYYY</span>
+                    <h2 class="article-card-title">Your Article Title Here</h2>
+                    <div class="article-card-footer">
+                    <span class="article-card-read">Read article <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                </a>
+            -->
+
+        </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+  <script src="/includes.js"></script>
+
+</body>
+</html>
+
