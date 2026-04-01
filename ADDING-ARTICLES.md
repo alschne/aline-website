@@ -46,7 +46,7 @@ Every article starts with a frontmatter block at the top of the file. Copy this 
 ---
 title: "Your Article Title Here"
 date: "2026-03-22"
-description: "One or two sentences summarising the article. This becomes the meta description shown in Google search results and link previews — make it specific and useful, not vague."
+description: "One or two sentences summarising the article. This becomes the meta description shown in Google search results and link previews — make it specific and useful, not vague. Should be less than 160 characters."
 image: "/images/article-your-slug.jpg"
 related:
   - slug-of-related-article
@@ -98,6 +98,8 @@ The setup already handles the technical SEO basics (title tag, meta description,
 - **No extra config needed** — the title, description, and Open Graph tags are all wired up automatically from your frontmatter
 
 ---
+
+Save article md file to src/articles/
 
 ## Step 5 — Preview locally
 
