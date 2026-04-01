@@ -4,7 +4,7 @@ date: "2026-03-24"
 description: "What salary benchmarking means, when companies need it, and common misconceptions."
 image: "/images/article-salary-benchmarking.png"
 related:
-  - another-article-slug
+  - 5-signs-your-underpaying
 ---
 
 # What Salary Benchmarking Actually Is (and When a Company Needs It)
