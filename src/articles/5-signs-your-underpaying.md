@@ -5,6 +5,7 @@ description: "Discover 5 signs your company is underpaying employees—from lost
 image: "/images/article-5-signs-your-underpaying.png"
 related:
   - salary-benchmarking
+  - how-to-benchmark
 ---
 
 
