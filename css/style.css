@@ -1,6 +1,13 @@
 /* Styling */
  
  :root {
+    --bg-light-grey: #eeeeee;
+    --primary-purple: #63585e;
+    --secondary-purple: #BCB3B8;
+    --footer-dark-grey: #2B2629;
+    --text-white: #ffffff;
+    --text-hover-green: #4e6e5d;
+
     --main-color: #63585e;
     --accent-color: #4e6e5d;
     --secondary-color: #998da0;
@@ -180,13 +187,13 @@
       font-family: 'Inter', sans-serif;
     }
     body {
-      background-color: var(--body-bg);
-      color: var(--body-text);
+      background-color: var(--bg-light-grey); /*var(--body-bg);*/
+      color: var(--primary-purple); /*var(--body-text);*/
       line-height: 1.6;
     }
     a {
       text-decoration: none;
-      color: inherit;
+      color: var(--primary-purple); /*inherit;*/
     }
     button {
       cursor: pointer;
@@ -195,8 +202,8 @@
 
     /* -------------------------------- Header -------------------------------- */
     header {
-      background-color: var(--header-bg);
-      color: var(--header-text);
+      background-color: var(--bg-light-grey); /*var(--header-bg);*/
+      color: var(--primary-purple); /*var(--header-text);*/
       padding: 10px 50px;
       display: flex;
       justify-content: space-between;
@@ -212,23 +219,23 @@
     }
 
     .logo-link img {
-        width: 60px;         
+        width: 80px;         
         height: 60px;
-        border-radius: 50%;    
+        border-radius: 25%;    
         object-fit: cover;    
-        border: 1px solid var(--logo-border);
+        /* border: 1px solid var(--logo-border); */
     }
 
     .logo-link h2 {
         margin: 0;            
         font-size: 1.5rem;
-        color: var(--logo-text);
+        color: var(--primary-purple); /*var(--logo-text);*/
         font-weight: 600;
         /* -webkit-text-stroke: 1px var(--secondary-color); */
     }
 
     .logo-link:hover h2 {
-        color: var(--logo-text-hover); 
+        color: var(--text-hover-green); /*var(--logo-text-hover);*/
         transition: color 0.3s ease;
     }
 
@@ -246,7 +253,7 @@
     }
     .dropdown-btn {
         margin-left: 25px;
-        color: var(--nav-text);
+        color: var(--primary-purple); /*var(--nav-text);*/
         font-weight: 500;
         cursor: pointer;
     }
@@ -254,7 +261,7 @@
         position: absolute;
         top: 100%;                 
         left: 0;
-        background-color: var(--dropdown-bg);
+        background-color: var(--bg-light-grey); /*var(--dropdown-bg);*/
         min-width: 240px;
         padding: 10px 0;
         border-radius: 6px;
@@ -269,14 +276,14 @@
         white-space: nowrap;
     }
     .dropdown-content a:hover {
-        background-color: var(--dropdown-hover-bg);
+        background-color: var(--secondary-purple); /*(--dropdown-hover-bg);*/
     }
     .dropdown:hover .dropdown-content {
         display: block;
     }
     nav a {
       margin-left: 25px;
-      color: var(--nav-text);
+      color: var(--primary-purple); /*var(--nav-text);*/
       font-weight: 500;
     }
     nav a.active {
@@ -306,7 +313,7 @@
         .hamburger span {
             width: 25px;
             height: 3px;
-            background-color: var(--hamburger-bar);
+            background-color: var(--bg-light-grey); /*var(--hamburger-bar);*/
             border-radius: 2px;
             transition: 0.3s;
         }
@@ -317,7 +324,7 @@
             top: 100%;
             left: 0;
             width: 100%;
-            background-color: var(--nav-mobile-bg);
+            background-color: var(--primary-purple); /*var(--nav-mobile-bg);*/
             flex-direction: column;
             align-items: flex-start;
             padding: 20px 0;
@@ -351,7 +358,7 @@
         .dropdown-content {
             display: block !important; 
             position: static;         
-            background-color: var(--nav-mobile-bg); 
+            background-color: var(--primary-purple); /*var(--nav-mobile-bg);*/
             box-shadow: none;
             padding: 0;
             width: 100%;
