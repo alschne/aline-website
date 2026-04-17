@@ -2,7 +2,7 @@
 title: "5 Signs Your Company Might Be Underpaying Employees"
 date: "2026-04-01"
 description: "Discover 5 signs your company is underpaying employees—from lost candidates to high turnover—and how to fix your compensation strategy."
-image: "/images/article-5-signs-your-underpaying.png"
+image: "/images/article-images/article-5-signs-your-underpaying.png"
 related:
   - salary-benchmarking
   - how-to-benchmark

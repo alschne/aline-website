@@ -2,7 +2,7 @@
 title: "The Biggest Mistakes Companies Make When Benchmarking Pay (And How to Avoid Them)"
 date: "2026-04-14"
 description: "Most companies get salary benchmarking wrong by mismatching job levels, ignoring geography, and using outdated data—leading to inaccurate pay ranges and lost talent."
-image: "/images/benchmarking-mistakes.png"
+image: "/images/article-images/article-benchmarking-mistakes.png"
 related:
   - salary-benchmarking
   - how-to-benchmark

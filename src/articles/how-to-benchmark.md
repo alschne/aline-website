@@ -2,7 +2,7 @@
 title: "How Small Companies Can Benchmark Salaries Without Expensive Data Tools"
 date: "2026-04-07"
 description: "Benchmark salaries without expensive tools using free data sources, role matching, location adjustments, and clear pay ranges to make competitive offers."
-image: "/images/how-to-benchmark.png"
+image: "/images/article-images/article-how-to-benchmark.png"
 related:
   - salary-benchmarking
   - 5-signs-your-underpaying
