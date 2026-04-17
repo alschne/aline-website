@@ -549,9 +549,9 @@
     .page-hero-img {
         flex: 1;
         position: relative;     
-        background-image: url('/images/laptop-on-desk.png');
+        /* background-image: url('/images/laptop-on-desk.png'); */
         background-size: cover;     
-        background-position: center; 
+        background-position: 50% 31%; 
     }
     .page-hero-img::before {
         content: "";
