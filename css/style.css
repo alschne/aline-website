@@ -996,7 +996,7 @@
         margin: 0 auto;
         padding: 60px 40px;
         border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        box-shadow: 0 10px 30px var(--card-shadow); /*(0,0,0,0.05);*/
     }
 
     .container-transparent {
@@ -1007,7 +1007,7 @@
 
     .section-title {
         font-size: 2rem;
-        color: var(--service-card-title);
+        color: var(--dark-grey); /*(--service-card-title);*/
         margin-bottom: 30px; 
         font-weight: 600;
         text-align: center;
@@ -1017,7 +1017,7 @@
 
     /* How It Works Section */
     .hiw-container {
-        background-color: var(--hiw-container-bg);
+        background-color: var(--text-white); /*(--hiw-container-bg);*/
     }
 
     .process-wrapper {
@@ -1034,7 +1034,7 @@
         left: 10%;
         right: 10%;
         height: 2px;
-        border-top: 2px dashed var(--connector-line-color);
+        border-top: 2px dashed var(--secondary); /*var(--connector-line-color);*/
         z-index: 1;
     }
 
@@ -1058,15 +1058,15 @@
     .icon-circle {
         width: 100px;
         height: 100px;
-        background-color: var(--icon-circle-bg);
-        border: 2px solid var(--icon-circle-border);
+        background-color: var(--text-white); /*(--icon-circle-bg);*/
+        border: 2px solid var(--secondary); /*var(--icon-circle-border);*/
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 auto 20px;
         font-size: 2.2rem;
-        color: var(--icon-circle-icon);
+        color: var(--primary); /*var(--icon-circle-icon);*/
         transition: all 0.3s ease;
     }
 
@@ -1081,12 +1081,12 @@
     }
 
     .wyr-card {
-        background: var(--wyr-card-bg);
+        background: var(--text-white); /*(--wyr-card-bg);*/
         padding: 50px 35px;
         border-radius: 12px;
         flex: 1;
         min-width: 280px;
-        box-shadow: 0 4px 15px var(--wyr-card-shadow);
+        box-shadow: 0 4px 15px var(--card-shadow); /*(--wyr-card-shadow);*/
     }
 
     .wyr-icon {
@@ -1106,17 +1106,17 @@
 
     /* Pricing Section */
     .pricing-content {
-        background-color: var(--pricing-bg);
-        color: var(--pricing-text);
+        background-color: var(--secondary); /*var(--pricing-bg);*/
+        color: var(--dark-grey); /*(--pricing-text);*/
     }
 
     .pricing-content .section-title {
-        color: var(--pricing-text); 
+        color: var(--dark-grey); /*(--pricing-text);*/
     }
 
     .pricing-card {
-        background-color: var(--pricing-card-bg); 
-        color: var(--pricing-card-text);
+        background-color: var(--text-white); /*var(--pricing-card-bg);*/
+        color: var(--dark-grey); /*var(--pricing-card-text);*/
         max-width: 450px;
         margin: 0 auto;
         padding: 40px;
@@ -1142,7 +1142,7 @@
     .per-unit {
         font-size: 1.5rem;  
         font-weight: 400;   
-        color: var(--per-unit-color);     
+        color: var(--primary); /*var(--per-unit-color); */   
     }
 
     .flat-rate {
@@ -1155,8 +1155,8 @@
     .cta-btn {
         display: inline-block;
         text-decoration: none;
-        background-color: var(--cta-btn-bg);
-        color: var(--cta-btn-text);
+        background-color: var(--primary); /*var(--cta-btn-bg);*/
+        color: var(--text-white); /*var(--cta-btn-text);*/
         border: none;
         padding: 12px 30px;
         font-size: 1rem;
@@ -1167,7 +1167,7 @@
     }
 
     .cta-btn:hover {
-        background-color: var(--cta-btn-bg-hover);
+        background-color: var(--hover); /*var(--cta-btn-bg-hover);*/
     }
 
     /* 3. RESPONSIVE DESIGN */
