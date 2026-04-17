@@ -9,177 +9,6 @@
     --hover: #4e6e5d;
     --card-shadow: rgba(0, 0, 0, 0.05);
     --card-shadow-hover: rgba(0, 0, 0, 0.1);
-
-    --main-color: #63585e;
-    --accent-color: #4e6e5d;
-    --secondary-color: #998da0;
-    --light1: #C0C0D1;
-    --light2: #b2beb5;
-    --neutral-bg: #ece9f0;
-    --font-family: 'Arial', sans-serif;
-
-    /* Extended color variables */
-    --body-bg: var(--neutral-bg);
-    --body-text: var(--main-color);
-
-    /* Header / Nav */
-    --header-bg: var(--main-color);
-    --header-text: var(--neutral-bg);
-    --nav-text: var(--neutral-bg);
-    --dropdown-bg: var(--main-color);
-    --dropdown-hover-bg: rgba(255, 255, 255, 0.1);
-    --dropdown-shadow: rgba(0, 0, 0, 0.15);
-    --hamburger-bar: var(--neutral-bg);
-    --nav-mobile-bg: var(--main-color);
-    --nav-mobile-shadow: rgba(0, 0, 0, 0.1);
-    --nav-mobile-dropdown-indent-border: rgba(255, 255, 255, 0.3);
-
-    /* Logo */
-    --logo-text: var(--light1);
-    --logo-text-hover: var(--light2);
-    --logo-border: var(--secondary-color);
-
-    /* Hero */
-    --hero-bg: var(--main-color);
-    --hero-text: var(--neutral-bg);
-    --hero-subtitle: #ddd;
-    --hero-underline: var(--neutral-bg);
-    --hero-gradient-from: var(--main-color);
-
-    /* Buttons */
-    --btn-learn-bg: var(--accent-color);
-    --btn-learn-text: var(--neutral-bg);
-    --btn-discover-bg: var(--accent-color);
-    --btn-discover-text: var(--neutral-bg);
-    --btn-get-in-touch-bg: var(--accent-color);
-    --btn-get-in-touch-text: var(--neutral-bg);
-    --btn-send-bg: var(--main-color);
-    --btn-send-text: white;
-    --cta-btn-bg: #70846e;
-    --cta-btn-bg-hover: #5a6b58;
-    --cta-btn-text: white;
-
-    /* Features strip */
-    --feature1-bg: var(--light1);
-    --feature2-bg: var(--light2);
-    --feature-icon: var(--main-color);
-    --feature-underline: var(--main-color);
-    --feature-text: #555;
-    --feature-shadow: rgba(0, 0, 0, 0.1);
-
-    /* Mid-text underline */
-    --mid-text-underline: var(--main-color);
-
-    /* Info cards */
-    --info1-bg: var(--light1);
-    --info2-bg: var(--light2);
-    --info-icon: var(--main-color);
-    --info-underline: var(--main-color);
-    --info-text: #555;
-
-    /* Testimonials */
-    --testimonial-section-bg: var(--secondary-color);
-    --testimonial-section-text: var(--neutral-bg);
-    --testimonial-header-line: var(--neutral-bg);
-    --testimonials-bg: var(--main-color);
-    --testimonials-text: var(--neutral-bg);
-
-    /* Page hero */
-    --page-hero-bg: var(--main-color);
-    --page-hero-text: var(--neutral-bg);
-    --page-hero-subtitle: var(--neutral-bg);
-    --page-hero-underline: var(--neutral-bg);
-    --page-hero-gradient-from: var(--main-color);
-
-    /* About page */
-    --about-container-bg: white;
-    --about-container-shadow: rgba(0, 0, 0, 0.05);
-    --about-subtitle: #555;
-    --about-body-text: #333;
-    --about-link: var(--accent-color);
-    --about-link-hover: var(--main-color);
-
-    /* Services page */
-    --service-card-bg: white;
-    --service-card-shadow: rgba(0, 0, 0, 0.05);
-    --service-card-shadow-hover: rgba(0, 0, 0, 0.1);
-    --service-card-title: #333;
-    --service-card-text: #777;
-    --profile-section-border: #eee;
-    --profile-img-border: #f8f8f8;
-    --profile-title-text: var(--main-color); /* inherits from card */
-
-    /* How It Works */
-    --hiw-container-bg: #ffffff;
-    --connector-line-color: #ccc;
-    --icon-circle-bg: white;
-    --icon-circle-border: #8c83a1;
-    --icon-circle-icon: #8c83a1;
-
-    /* What You Receive */
-    --wyr-card-bg: white;
-    --wyr-card-shadow: rgba(0, 0, 0, 0.05);
-
-    /* Pricing */
-    --pricing-bg: var(--secondary-color);
-    --pricing-text: white;
-    --pricing-card-bg: #e2ede5;
-    --pricing-card-text: #2d2a35;
-    --per-unit-color: #555;
-
-    /* FAQ */
-    --faq-item-bg: #ffffff;
-    --faq-header-hover-bg: #e0e0e8;
-    --faq-mid-text-underline: var(--main-color);
-
-    /* Contact */
-    --contact-card-bg: white;
-    --contact-card-shadow: rgba(0, 0, 0, 0.1);
-    --contact-form-border: #ddd;
-    --contact-label: #666;
-    --contact-info-border: #eee;
-    --contact-link-color: #444;
-    --contact-link-hover: var(--main-color);
-    --contact-info-p-color: #777;
-
-    /* Footer */
-    --footer-bg: var(--main-color);
-    --footer-text: var(--neutral-bg);
-    --footer-underline: var(--neutral-bg);
-    --footer-link: var(--neutral-bg);
-    --social-icon-color: #000;
-    --social-icon-hover: #E1306C;
-
-    /* Articles */
-    --article-card-bg: white;
-    --article-card-shadow: rgba(0, 0, 0, 0.05);
-    --article-card-shadow-hover: rgba(0, 0, 0, 0.1);
-    --article-card-date: #999;
-    --article-card-title: var(--main-color);
-    --article-card-footer-border: #eee;
-    --article-card-read: var(--accent-color);
-    --articles-count-color: #888;
-    --articles-empty-text: #aaa;
-    --articles-empty-icon: var(--light1);
-
-    /* Article page body */
-    --article-header-border: #eee;
-    --article-header-title: var(--main-color);
-    --article-header-date: #999;
-    --article-body-text: #333;
-    --article-body-h2: var(--main-color);
-    --article-body-h2-border: #eee;
-    --article-body-h3: var(--main-color);
-    --article-body-link: var(--accent-color);
-    --article-body-link-hover: var(--main-color);
-    --article-body-strong: var(--main-color);
-    --article-blockquote-border: var(--accent-color);
-    --article-blockquote-bg: var(--neutral-bg);
-    --article-blockquote-text: #555;
-    --article-related-bg: var(--neutral-bg);
-    --article-related-title: var(--main-color);
-    --article-related-link: var(--accent-color);
-    --article-back-color: var(--main-color);
 }
 
 * {
@@ -265,7 +94,7 @@
         min-width: 240px;
         padding: 10px 0;
         border-radius: 6px;
-        box-shadow: 0 8px 20px var(--dropdown-shadow);
+        box-shadow: 0 8px 20px var(--card-shadow-hover);
         display: none;
         z-index: 1000;
     }
@@ -330,7 +159,7 @@
             padding: 20px 0;
             z-index: 9999;
             display: none; 
-            box-shadow: 0 10px 15px var(--nav-mobile-shadow);
+            box-shadow: 0 10px 15px var(--card-shadow-hover);
         }
 
         nav a, .dropdown-btn {
@@ -369,7 +198,7 @@
             margin: 0 !important;
             font-size: 1rem;
             opacity: 0.9;
-            border-left: 2px solid var(--nav-mobile-dropdown-indent-border); 
+            border-left: 2px solid var(--secondary); 
         }
 
         .dropdown-btn {
@@ -530,7 +359,7 @@
 
     .feature:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 15px var(--feature-shadow);
+        box-shadow: 0 8px 15px var(--card-shadow-hover);
     }
 
     .mid-text-txt {
@@ -1789,7 +1618,7 @@
         display: block;
         width: 100px;
         height: 1px;
-        background-color: var(--footer-underline);
+        background-color: var(--text-white);
     }
     footer a {
       color: var(--text-white); 
