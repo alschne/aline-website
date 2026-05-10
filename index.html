@@ -11,6 +11,9 @@
 
         gtag('config', 'G-CWZFZTF7LP');
     </script>
+    <link rel="icon" type="image/png" href="/images/Aline Logo 2.png">
+    <link rel="shortcut icon" href="/images/Aline Logo 2.png">
+    <link rel="apple-touch-icon" href="/images/Aline Logo 2.png">
     <meta property="og:title" content="Aline Analytics"/>
     <meta property="og:description" content="Stop guessing on pay. Empower your leaders with market-aligned compensation data to hire faster and retain talent with total transparency."/>
     <meta property="og:image" content="https://www.yourdomain.com/images/Aline Logo.png"/>
@@ -37,7 +40,7 @@
             <h3>Compensation shouldn’t be a guessing game.</h3>
             <p>Aline Analytics helps growing companies align employee compensation to the market so leaders can make confident, defensible pay decisions and clearly explain them to employees — especially during hiring, raises, and bonus cycles.</p>
             <div class="hero-btn">
-                <a href="/about/" class="btn btn-learn">Learn More</a>
+                <a href="/contact/" class="btn btn-learn">Contact Us</a>
             </div>
         </div>
         <div class="hero-img">
@@ -52,16 +55,75 @@
             <h4>Our Services</h4>
             <p>Tailored Solutions That Drive Results</p>
         </a>
-        <a href="/about/" class="feature feature2">
+        <!-- <a href="/about/" class="feature feature2">
             <i class="fa-solid fa-user"></i>
             <h4>About Us</h4>
             <p>Your Strategy, Our Expertise</p>
-        </a>
+        </a> -->
         <a href="/faq/" class="feature feature1">
             <i class="fa-solid fa-circle-question"></i>
             <h4>FAQs</h4>
             <p>Everything You've Been Wondering About</p>
         </a>
+    </section>
+
+    <section class="testimonial-section">
+        <div class="testimonial-header">
+            <h3>Client Testimonials</h3>
+        </div>
+        <div class="testimonial-wrapper">
+
+            <button class="testimonial-arrow" id="leftArrow">❮</button>
+
+            <div class="testimonials-container" id="testimonialContainer">
+
+                <div class="testimonial-card">
+                     <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p>
+                        "Aline Analytics helped us develop a competitive, sustainable compensation framework that clearly communicates performance expectations, supports productivity, and recognizes employee contributions. We highly recommend Aline Analytics to any organization seeking to attract and retain top talent."
+                    </p>
+                    <strong>- Stacy W</strong>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p>
+                        "Aline Analytics gave us a clear, strategic approach to compensation that immediately improved internal alignment and employee confidence. The recommendations were practical, well-researched, and easy to implement. We would absolutely recommend Aline Analytics to organizations looking to build a stronger compensation strategy."
+                    </p>
+                    <strong>- Nick R</strong>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p>
+                        "The team at Aline Analytics helped us bring structure and consistency to a process that had become difficult to manage internally. Their insights and market expertise made a significant impact on how we approach compensation planning and employee retention. Aline Analytics was a valuable partner throughout the entire process."
+                    </p>
+                    <strong>- Mary S</strong>
+                </div>
+
+        </div>
+
+        <button class="testimonial-arrow" id="rightArrow">❯</button>
+
+    </div>
     </section>
 
     <section class="mid-text">
@@ -80,7 +142,7 @@
         <div class="info1">
             <i class="fa-solid fa-handshake"></i>
             <h4>Who we work with</h4>
-            <p>We partner with small to mid-sized companies (typically 30–200 employees) that are growing, hiring, or navigating change — and want confidence their compensation decisions are sound.</p>
+            <p>We partner with small to mid-sized companies (typically 1–200 employees) that are growing, hiring, or navigating change — and want confidence their compensation decisions are sound.</p>
         </div>
         <div class="info2">
             <i class="fa-solid fa-clipboard-check"></i>
@@ -90,25 +152,32 @@
     </section>
 
     <a href="/services/" class="discover-btn">Discover More</a>
-    
-    <section class="testimonial-section">
-        <div class="testimonial-header">
-            <h3>Client Testimonials</h3>
-        </div>
-        <section class="testimonials">
-            <div class="testimonial">
-                <img src="images/ST logo.png" alt="Client Photo">
-                <p>“Allie Roth of Aline Analytics was instrumental in helping our company design a compensation structure that clearly communicates performance expectations, supports productivity, and recognizes employee contributions. Her professionalism and expertise in compensation analysis and pay structure design enabled us to develop a competitive, sustainable framework aligned with our compensation philosophy. We highly recommend Aline Analytics to any organization seeking to attract and retain top talent.” <strong>Stacy Wingerter, Human Resource Manager, Signal Tech</strong></p>
-            </div>
-        </section>
-    </section>
-    
 
   </main>
 
   <div id="footer"></div>
   <script src="/includes.js"></script>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const container = document.getElementById("testimonialContainer");
+
+        const leftArrow = document.getElementById("leftArrow");
+        const rightArrow = document.getElementById("rightArrow");
+
+        rightArrow.addEventListener("click", function () {
+            const firstCard = container.firstElementChild;
+            container.appendChild(firstCard);
+        });
+
+        leftArrow.addEventListener("click", function () {
+            const lastCard = container.lastElementChild;
+            container.insertBefore(lastCard, container.firstElementChild);
+        });
+
+    });
+    </script>
 </body>
 </html>
 
